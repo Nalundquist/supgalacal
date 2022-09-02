@@ -29,7 +29,7 @@ describe ('GalAge', () => {
 		expect(newAge.jupiAge).toEqual(6)
 	})
 
-	test('lifeExp method should calculate average earth life expectancy modified by piousness; apply that to previous planet calculations', () => {
+	test('lifeExp method should calculate average earth life expectancy modified by high piousness; apply that to previous planet calculations', () => {
 		newAge.piety = "god-fearing" 
 		newAge.lifeExp();
 		expect(newAge.earthExp).toEqual(91)
@@ -37,5 +37,35 @@ describe ('GalAge', () => {
 		expect(newAge.venusExp).toEqual(147)
 		expect(newAge.marsExp).toEqual(48)
 		expect(newAge.jupiExp).toEqual(8)
+	})
+
+	test('lifeExp method should calculate average earth life expectancy modified by highest piousness; apply that to previous planet calculations', () => {
+		newAge.piety = "zealot" 
+		newAge.lifeExp();
+		expect(newAge.earthExp).toEqual(104)
+		expect(newAge.mercExp).toEqual(433)
+		expect(newAge.venusExp).toEqual(168)
+		expect(newAge.marsExp).toEqual(55)
+		expect(newAge.jupiExp).toEqual(9)
+	})
+
+	test('lifeExp method should calculate average earth life expectancy modified by low piousness; apply that to previous planet calculations', () => {
+		newAge.piety = "strayed" 
+		newAge.lifeExp();
+		expect(newAge.earthExp).toEqual(63)
+		expect(newAge.mercExp).toEqual(262)
+		expect(newAge.venusExp).toEqual(102)
+		expect(newAge.marsExp).toEqual(34)
+		expect(newAge.jupiExp).toEqual(5)
+	})
+
+	test('lifeExp method should calculate average earth life expectancy modified by lowest piousness; apply that to previous planet calculations', () => {
+		newAge.piety = "apostate" 
+		newAge.lifeExp();
+		expect(newAge.earthExp).toEqual(55)
+		expect(newAge.mercExp).toEqual(229)
+		expect(newAge.venusExp).toEqual(89)
+		expect(newAge.marsExp).toEqual(29)
+		expect(newAge.jupiExp).toEqual(5)
 	})
 })

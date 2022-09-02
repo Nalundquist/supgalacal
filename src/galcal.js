@@ -1,6 +1,7 @@
 export default class GalAge {
-	constructor(age){
+	constructor(age, piety){
 		this.earthAge = age;
+		this.piety = piety;
 	}
 
 	galCal() {
@@ -11,6 +12,14 @@ export default class GalAge {
 	}
 
 	lifeExp() {
-
+		let lifeMod = 1;
+		if (this.piety === "god-fearing"){
+			lifeMod = .8
+		}
+		this.earthExp = Math.round(73 / lifeMod);
+		this.mercExp = Math.round(this.earthExp / .24);
+		this.venusExp = Math.round(this.earthExp / .62);
+		this.marsExp = Math.round(this.earthExp / 1.88);
+		this.jupiExp = Math.round(this.earthExp / 11.86);
 	}
 } 
