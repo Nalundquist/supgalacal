@@ -24,4 +24,8 @@ describe ('GalAge', () => {
 	test('galCal method should take this.earthAge and convert it to Mars Years (rounded to the nearest integer)', () => {
 		expect(newAge.marsAge).toEqual(38)
 	})
+
+	test('galCal method should take this.earthAge and convert it to Jupiter Years (rounded to the nearest integer)', () => {
+		expect(newAge.jupiAge).toEqual(6)
+	})
 })

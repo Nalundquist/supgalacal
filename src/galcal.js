@@ -6,5 +6,6 @@ export default class GalAge {
 	galCal() {
 		this.mercAge = Math.round(this.earthAge / .24);
 		this.venusAge = Math.round(this.earthAge / .62);
+		this.marsAge = Math.round(this.earthAge / 1.88);
 	}
 } 
