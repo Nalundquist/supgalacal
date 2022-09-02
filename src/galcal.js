@@ -4,15 +4,21 @@ export default class GalAge {
 		this.piety = piety;
 	}
 
-	galCal() {
-		this.mercAge = Math.round(this.earthAge / .24);
-		this.venusAge = Math.round(this.earthAge / .62);
-		this.marsAge = Math.round(this.earthAge / 1.88);
-		this.jupiAge = Math.round(this.earthAge / 11.86);
+	galCal(age) {
+		const mercAge = Math.round(age / .24);
+		const venusAge = Math.round(age / .62);
+		const marsAge = Math.round(age / 1.88);
+		const jupiAge = Math.round(age / 11.86);
+		const ageArray = [mercAge, venusAge, marsAge, jupiAge];
+		return ageArray;
 	}
 
 	calAge() {
-		
+		const ageArray = this.galCal(this.earthAge);
+		this.mercAge = ageArray[0];
+		this.venusAge = ageArray[1];
+		this.marsAge = ageArray[2];
+		this.jupiAge = ageArray[3];
 	}
 
 	lifeExp() {
@@ -29,9 +35,10 @@ export default class GalAge {
 			lifeMod = 1
 		}
 		this.earthExp = Math.round(73 / lifeMod);
-		this.mercExp = Math.round(this.earthExp / .24);
-		this.venusExp = Math.round(this.earthExp / .62);
-		this.marsExp = Math.round(this.earthExp / 1.88);
-		this.jupiExp = Math.round(this.earthExp / 11.86);
+		const expArray = this.galCal(this.earthExp);
+		this.mercExp = expArray[0];
+		this.venusExp = expArray[1];
+		this.marsExp = expArray[2];
+		this.jupiExp = expArray[3];
 	}
 } 

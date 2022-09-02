@@ -6,7 +6,8 @@ describe ('GalAge', () => {
 
 	beforeEach(() => {
 		newAge = new GalAge(72);
-		newAge.galCal();
+		newAge.calAge();
+		newAge.lifeExp();
 	});
 
 	test('Should be a constructor capable of holding an earthAge key:value pair', () => {
@@ -31,7 +32,6 @@ describe ('GalAge', () => {
 
 	test('lifeExp method should calculate average earth life expectancy modified by high piousness; apply that to previous planet calculations', () => {
 		newAge.piety = "god-fearing" 
-		newAge.lifeExp();
 		expect(newAge.earthExp).toEqual(91)
 		expect(newAge.mercExp).toEqual(379)
 		expect(newAge.venusExp).toEqual(147)
@@ -41,7 +41,6 @@ describe ('GalAge', () => {
 
 	test('lifeExp method should calculate average earth life expectancy modified by highest piousness; apply that to previous planet calculations', () => {
 		newAge.piety = "zealot" 
-		newAge.lifeExp();
 		expect(newAge.earthExp).toEqual(104)
 		expect(newAge.mercExp).toEqual(433)
 		expect(newAge.venusExp).toEqual(168)
@@ -51,7 +50,6 @@ describe ('GalAge', () => {
 
 	test('lifeExp method should calculate average earth life expectancy modified by low piousness; apply that to previous planet calculations', () => {
 		newAge.piety = "strayed" 
-		newAge.lifeExp();
 		expect(newAge.earthExp).toEqual(63)
 		expect(newAge.mercExp).toEqual(263)
 		expect(newAge.venusExp).toEqual(102)
@@ -61,7 +59,6 @@ describe ('GalAge', () => {
 
 	test('lifeExp method should calculate average earth life expectancy modified by lowest piousness; apply that to previous planet calculations', () => {
 		newAge.piety = "apostate" 
-		newAge.lifeExp();
 		expect(newAge.earthExp).toEqual(55)
 		expect(newAge.mercExp).toEqual(229)
 		expect(newAge.venusExp).toEqual(89)
@@ -71,7 +68,6 @@ describe ('GalAge', () => {
 
 	test('lifeExp method should return default life expectancy on earth for neutral piousness/no input; apply that to previous planet calculations', () => {
 		newAge.piety = "" 
-		newAge.lifeExp();
 		expect(newAge.earthExp).toEqual(73)
 		expect(newAge.mercExp).toEqual(304)
 		expect(newAge.venusExp).toEqual(118)
