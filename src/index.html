@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Super Galactic Age Calculator</title>
+	</head>
+	<body>
+		<div class="head-row">
+			<div class="main-head">
+				<h2>Super Galactic Age Calculator</h2>
+				<h4>How old are you on other planets?</h4>
+			</div>
+			<div class="side-head">
+
+			</div>
+		</div>
+		<div class="container">
+			<div class="main-body">
+				<p>Input your age and a rough rating of your piousness below and we will give your equivalent age on other planets as well as your predicted lifespan!  If you have outlived your predicted lifespan, we will tell you for how long you have cheated death.</p>
+				<form class="form" id="age-pious-form">
+					<label name="age-input">How old are you?</label>
+					<input type="number" id="age-input" name="age-value">
+					<p>Of the following choices, which describes your level of faith and deference to your chosen deity?</p>
+					<label name="god-fearing">
+						<input type="radio" name="piety" value="god-fearing">
+						I am enriched by prayer and give myself to the service of <span class="redact">[REDACTED]</span>
+					</label><br>
+					<label name="zealot">
+						<input type="radio" name="piety" value="zealot">
+						<span class="redact">[REDACTED]</span>!!!!  Your name fills me with horrible power; your will on this Earth shall be done by my hand.
+					</label><br>
+					<label name="strayed">
+						<input type="radio" name="piety" value="strayed">
+						What is this gnawing doubt?  I once kneeled in supplication before your idols, <span class="redact">[REDACTED]</span>, but now...
+					</label><br>
+					<label name="heretic">
+						<input type="radio" name="piety" value="heretic">
+						*Spits* You speak of <span class="redact">[REDACTED]</span>?  So far as I can tell, <span class="redact">[REDACTED]</span> is either a tale woven from the imagination of humans or a extra-planar demiurge whom feeds upon the prayers of the lost.  In either case, I shall battle <span class="redact">[REDACTED]</span> until I cease to draw breath.
+					</label><br>
+					<label name="undecided">
+						<input type="radio" name="piety" value="undecided">
+						I choose no position with regards to <span class="redact">[REDACTED]</span>.
+					</label><br>
+					<button type="submit" class="btn"  id="age-piety-btn"></button>
+				</form>
+			</div>
+			<div class="sidebar-body">
+
+			</div>
+		</div>
+	</body>
+</html>
