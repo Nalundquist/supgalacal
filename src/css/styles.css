@@ -8,11 +8,23 @@ body{
 	display: flex;
 	flex-flow: row;
 }
+
+.redact{
+	font-weight: bold;
+	font-size: 1.1em;
+	background-color: red;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
 .main-head{
+	align-self: flex-start;
+	font-size: 2.1em;
 	margin-top: 18px;
 	margin-bottom: 25px;
 	margin-left: 4%;
-	margin-right: 25%;
+	margin-right: 12%;
 	padding-left: 8%;
 	padding-right: 5%;
 }
@@ -21,23 +33,26 @@ body{
 
 .side-head{
 	align-self: flex-end;
-	height: 375px;
-	width: 300px;
+	height: 350px;
+	width: 400px;
 }
 
 .side-head img{
-	height: 560px;
-	width: 450px;
+	align-self: flex-end;
+	height: 600px;
+	width:600px;
 }
 
 
 .container{
 	margin-left: 3%;
 	margin-right: 6%;
+	display: flex;
 	flex: row;
 }
 
 .main-body{
+	align-self: flex-start;
 	padding-left: 3%;
 	padding-right: 6%;
 	padding-top: 10px;
@@ -48,9 +63,12 @@ body{
 	margin-right: 8%;
 	width: 75%;
 	box-sizing: border-box;
+	line-height: 35px;
+	font-size: 1.15em;
 }
 
 .sidebar-body{
+	align-self: flex-end;
 	width: 25%;
 	box-sizing: border-box;
 	padding-left: 2%;
