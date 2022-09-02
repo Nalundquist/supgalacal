@@ -32,7 +32,7 @@ export default class GalAge {
 		} else if (this.piety === "apostate"){
 			lifeMod = 1.325;
 		} else {
-			lifeMod = 1
+			lifeMod = 1;
 		}
 		this.earthExp = Math.round(73 / lifeMod);
 		const expArray = this.galCal(this.earthExp);
@@ -40,5 +40,12 @@ export default class GalAge {
 		this.venusExp = expArray[1];
 		this.marsExp = expArray[2];
 		this.jupiExp = expArray[3];
+		if (this.earthAge > this.earthExp) {
+			this.earthDiff = this.earthAge - this.earthExp;
+			this.mercDiff = this.mercAge - this.mercExp;
+			this.venusDiff = this.venusAge - this.venusExp;
+			this.marsDiff = this.marsAge - this.marsExp;
+			this.jupiDiff = this.jupiAge - this.jupiExp;
+		}
 	}
-} 
+}

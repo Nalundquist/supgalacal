@@ -88,11 +88,11 @@ describe ('GalAge', () => {
 			const atheistPartyElder = new GalAge(115, "apostate");
 			atheistPartyElder.calAge();
 			atheistPartyElder.lifeExp();
-			expect(newAge.earthExpDiff).toEqual(60)
-			expect(newAge.mercExpDiff).toEqual(250)
-			expect(newAge.venusExpDiff).toEqual(96)
-			expect(newAge.marsExpDiff).toEqual(32)
-			expect(newAge.jupiExpDiff).toEqual(5)
+			expect(atheistPartyElder.earthDiff).toEqual(60)
+			expect(atheistPartyElder.mercDiff).toEqual(250)
+			expect(atheistPartyElder.venusDiff).toEqual(96)
+			expect(atheistPartyElder.marsDiff).toEqual(32)
+			expect(atheistPartyElder.jupiDiff).toEqual(5)
 		})
 	})
 
