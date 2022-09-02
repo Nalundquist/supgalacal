@@ -14,9 +14,11 @@ export default class GalAge {
 	lifeExp() {
 		let lifeMod = 1;
 		if (this.piety === "god-fearing"){
-			lifeMod = .8
+			lifeMod = .8;
 		} else if (this.piety === "zealot"){
-			lifeMod = .7
+			lifeMod = .7;
+		} else if (this.piety === "strayed"){
+			lifeMod = 1.15;
 		}
 		this.earthExp = Math.round(73 / lifeMod);
 		this.mercExp = Math.round(this.earthExp / .24);
