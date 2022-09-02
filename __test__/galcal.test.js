@@ -14,6 +14,7 @@ describe ('GalAge', () => {
 	})
 
 	describe ('calAge', () => {
+
 		test('calAge method should take this.earthAge and convert it to Mercury Years (rounded to the nearest integer)', () => {
 			expect(newAge.mercAge).toEqual(300);
 		})
@@ -32,6 +33,7 @@ describe ('GalAge', () => {
 	})
 
 	describe('lifeExp', () => {
+
 		test('lifeExp method should calculate average earth life expectancy modified by high piousness; apply that to previous planet calculations', () => {
 			newAge.piety = "god-fearing"
 			newAge.lifeExp(); 
@@ -83,18 +85,19 @@ describe ('GalAge', () => {
 		})
 
 		test('lifeExp should calculates years beyond expectancy if one has outlived said on a per-planet basis', () => {
-			atheistPartyElder(115, "apostate");
+			const atheistPartyElder = new GalAge(115, "apostate");
 			atheistPartyElder.calAge();
 			atheistPartyElder.lifeExp();
-			expect(newAge.earthExpDiff).toEqual(73)
-			expect(newAge.mercExpDiff).toEqual(304)
-			expect(newAge.venusExpDiff).toEqual(118)
-			expect(newAge.marsExpDiff).toEqual(39)
-			expect(newAge.jupiExpDiff).toEqual(6)
+			expect(newAge.earthExpDiff).toEqual(60)
+			expect(newAge.mercExpDiff).toEqual(250)
+			expect(newAge.venusExpDiff).toEqual(96)
+			expect(newAge.marsExpDiff).toEqual(32)
+			expect(newAge.jupiExpDiff).toEqual(5)
 		})
 	})
 
 	describe('galCal', () => {
+
 		test('galCal should take an "age" argument and return an array with four numbers; each "age" modified', () => {
 			expect(newAge.galCal(91)).toEqual([379, 147, 48, 8])
 		})
