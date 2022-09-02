@@ -53,7 +53,7 @@ describe ('GalAge', () => {
 		newAge.piety = "strayed" 
 		newAge.lifeExp();
 		expect(newAge.earthExp).toEqual(63)
-		expect(newAge.mercExp).toEqual(262)
+		expect(newAge.mercExp).toEqual(263)
 		expect(newAge.venusExp).toEqual(102)
 		expect(newAge.marsExp).toEqual(34)
 		expect(newAge.jupiExp).toEqual(5)
