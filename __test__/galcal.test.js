@@ -65,7 +65,7 @@ describe ('GalAge', () => {
 		})
 
 		test('lifeExp method should calculate average earth life expectancy modified by lowest piousness; apply that to previous planet calculations', () => {
-			newAge.piety = "apostate"
+			newAge.piety = "heretic"
 			newAge.lifeExp(); 
 			expect(newAge.earthExp).toEqual(55)
 			expect(newAge.mercExp).toEqual(229)
@@ -85,7 +85,7 @@ describe ('GalAge', () => {
 		})
 
 		test('lifeExp should calculates years beyond expectancy if one has outlived said on a per-planet basis', () => {
-			const atheistPartyElder = new GalAge(115, "apostate");
+			const atheistPartyElder = new GalAge(115, "heretic");
 			atheistPartyElder.calAge();
 			atheistPartyElder.lifeExp();
 			expect(atheistPartyElder.earthDiff).toEqual(60)

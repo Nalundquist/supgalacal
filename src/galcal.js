@@ -29,7 +29,7 @@ export default class GalAge {
 			lifeMod = .7;
 		} else if (this.piety === "strayed"){
 			lifeMod = 1.15;
-		} else if (this.piety === "apostate"){
+		} else if (this.piety === "heretic"){
 			lifeMod = 1.325;
 		} else {
 			lifeMod = 1;
