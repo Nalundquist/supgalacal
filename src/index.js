@@ -5,15 +5,16 @@ const formSubmit = (event) => {
 	event.preventDefault();
 	
 	const resultSide = document.getElementById("result-sidebar");
-	resultSide.innertext = null
-	const ageInput = document.getElementById("age-input");
-	if (document.querySelector("input[name='piety']:checked") === null){
+	resultSide.innerHTML = null;
+	resultSide.innertext = null;
+	if (document.querySelector("input[name='piety']:checked") === null || document.getElementById("age-input").value === ""){
 		const errorP = document.createElement("p");
 		resultSide.append(errorP);
 		resultSide.classList.remove("hidden");
 		resultSide.classList.add("results-bar");
 		errorP.append("Please put in an age and your piousness to receive valid results.");
 	} else {
+		const ageInput = document.getElementById("age-input").value;
 		const pietyInput = document.querySelector("input[name='piety']:checked").value;
 		console.log(pietyInput)
 		console.log(ageInput)
@@ -21,7 +22,7 @@ const formSubmit = (event) => {
 		resultSide.classList.add("hidden");
 		resultSide.classList.remove("results-bar");
 
-		if (ageInput === 'undefined' || ageInput === 'null' || isNaN(ageInput) || pietyInput === 'undefined' || pietyInput === null){
+		if (isNaN(ageInput)){
 			const errorP = document.createElement("p");
 			resultSide.append(errorP);
 			resultSide.classList.remove("hidden");
@@ -122,7 +123,10 @@ const formSubmit = (event) => {
 			jupiResult5.after(jupiResult6);
 			jupiResult6.append(galAge.jupiExp);
 
-			if (this.earthAge > this.earthExp){
+			resultSide.classList.remove("hidden");
+			resultSide.classList.add("results-bar");
+
+			if (galAge.earthAge > galAge.earthExp){
 				const earthResult7 = document.createElement("p");
 				const earthResult8 = document.createElement("strong");
 				const earthResult9 = document.createElement("p");
