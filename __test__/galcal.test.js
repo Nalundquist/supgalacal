@@ -13,19 +13,19 @@ describe ('GalAge', () => {
 		expect(newAge.earthAge).toEqual(72);
 	})
 
-	test('galCal method should take this.earthAge and convert it to Mercury Years (rounded to the nearest integer)', () => {
+	test('calAge method should take this.earthAge and convert it to Mercury Years (rounded to the nearest integer)', () => {
 		expect(newAge.mercAge).toEqual(300);
 	})
 
-	test('galCal method should take this.earthAge and convert it to Venus Years (rounded to the nearest integer)', () => {
+	test('calAge method should take this.earthAge and convert it to Venus Years (rounded to the nearest integer)', () => {
 		expect(newAge.venusAge).toEqual(116)
 	})
 
-	test('galCal method should take this.earthAge and convert it to Mars Years (rounded to the nearest integer)', () => {
+	test('calAge method should take this.earthAge and convert it to Mars Years (rounded to the nearest integer)', () => {
 		expect(newAge.marsAge).toEqual(38)
 	})
 
-	test('galCal method should take this.earthAge and convert it to Jupiter Years (rounded to the nearest integer)', () => {
+	test('calAge method should take this.earthAge and convert it to Jupiter Years (rounded to the nearest integer)', () => {
 		expect(newAge.jupiAge).toEqual(6)
 	})
 
@@ -78,4 +78,9 @@ describe ('GalAge', () => {
 		expect(newAge.marsExp).toEqual(39)
 		expect(newAge.jupiExp).toEqual(6)
 	})
+
+	test('galCal should take an "age" argument and return an array with four numbers; each "age" modified', () => {
+		expect(newAge.galCal(91)).toEqual([379, 147, 48, 8])
+	})
 })
+
