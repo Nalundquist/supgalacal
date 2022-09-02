@@ -68,4 +68,14 @@ describe ('GalAge', () => {
 		expect(newAge.marsExp).toEqual(29)
 		expect(newAge.jupiExp).toEqual(5)
 	})
+
+	test('lifeExp method should return default life expectancy on earth for neutral piousness/no input; apply that to previous planet calculations', () => {
+		newAge.piety = "" 
+		newAge.lifeExp();
+		expect(newAge.earthExp).toEqual(73)
+		expect(newAge.mercExp).toEqual(304)
+		expect(newAge.venusExp).toEqual(118)
+		expect(newAge.marsExp).toEqual(39)
+		expect(newAge.jupiExp).toEqual(6)
+	})
 })
