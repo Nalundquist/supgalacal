@@ -44,11 +44,15 @@ An exercise in using webpack, Jest, eslint, et al.  When deployed displays a sim
 
 		>npm install
 
-* After such you can type:
+	after such, type:
 
 		>npm run start
 
-* To host the site on your machine at localhost:8080.
+	To host the site on your machine at localhost:8080.  Alternately you can type
+
+		npm run build 
+
+	to have webpack put together things as needed and access the project by opening the supgalacal folder in file browser, open the dist folder, and open the index.html therein in the browser of your choice.  
 
 ## Known Bugs
 
